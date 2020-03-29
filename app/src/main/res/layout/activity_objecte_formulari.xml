@@ -48,7 +48,7 @@
             android:orientation="vertical">
 
             <LinearLayout
-                android:id="@+id/Dades imatge"
+                android:id="@+id/Dades_imatge"
                 android:layout_width="match_parent"
                 android:layout_height="69dp"
                 android:orientation="horizontal">
