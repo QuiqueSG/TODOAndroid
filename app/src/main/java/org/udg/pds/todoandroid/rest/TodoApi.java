@@ -1,6 +1,9 @@
 package org.udg.pds.todoandroid.rest;
 
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
+
 import org.udg.pds.todoandroid.entity.IdObject;
+import org.udg.pds.todoandroid.entity.Objecte;
 import org.udg.pds.todoandroid.entity.Task;
 import org.udg.pds.todoandroid.entity.User;
 import org.udg.pds.todoandroid.entity.UserLogin;
@@ -25,11 +28,16 @@ public interface TodoApi {
   @POST("/tasks")
   Call<IdObject> addTask(@Body Task task);
 
+  @POST("/objectes")
+  Call<IdObject> addObjecte(@Body Objecte obj);
+
   @GET("/tasks")
   Call<List<Task>> getTasks();
 
   @GET("/tasks/{id}")
   Call<Task> getTask(@Path("id") String id);
+
+
 
 }
 
